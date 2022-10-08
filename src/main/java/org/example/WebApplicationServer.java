@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 
 /**
- * 1. 톰켓으로 서버를 연다.
+ * 1. 톰켓으로 WAS 를 연다.
  * 2. DispatcherServlet 을 통해 모든 요청을 받아온다.
  * 3. RequestMappingHandlerMapping 을 통해 경로에 따라 컨트롤러를 실행시킨다.
  */
