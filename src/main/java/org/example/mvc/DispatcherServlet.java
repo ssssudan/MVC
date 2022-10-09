@@ -39,8 +39,8 @@ public class DispatcherServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        logger.info("[DispatcherServlet] service started.");
         try {
-            logger.info("[DispatcherServlet] service started.");
             Controller handler = requestMappingHandlerMapping.findHandler(new HandlerKey(RequestMethod.valueOf(request.getMethod()), request.getRequestURI())); // 요청 메서드와 URI 가 오면 해당 메서드와 URI의 컨트롤러를 핸들러에 저장
             // "redirect:/users"  vs  forward
             String viewName = handler.handleRequest(request, response);
